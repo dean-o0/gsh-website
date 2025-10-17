@@ -1,0 +1,205 @@
+#portfolio {
+  width: 100vw;
+  background-image: url("https://www.goldstandardholdings.co.za/wp-content/uploads/2017/11/office-1209640_1920.jpg");
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+  scroll-margin-top: 67px;
+}
+
+#portfolio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* adjust darkness */
+  z-index: -1;
+}
+
+.portfolio-content {
+  padding: 40px 0 50px;
+}
+
+.portfolio-grid {
+  width: 100%;
+  margin-top: 0;
+}
+
+.main-row {
+  margin-top: 20px;
+}
+
+.love-row {
+  margin-top: 40px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.love-row > .col-md-6 {
+  display: flex;
+}
+
+.exp-details {
+  margin-bottom: 10px;
+  border: none;
+  background-color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding: 0;
+  transition: 0.4s;
+  display: flex;
+  flex: 1;
+}
+
+.exp-details:hover .exp-hover {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.exp-details:hover h3,
+.exp-details:hover p {
+  color: black;
+}
+
+.exp-details:hover .underline1,
+.exp-details:hover .underline2 {
+  background-color: white;
+}
+
+.exp-hover {
+  position: absolute;
+  
+  height: 100%;
+  width: 100%;
+  transition: 0.4s;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.exp-main {
+  padding: 40px 10px;
+  min-height: 485px;
+}
+
+.exp-details h3 {
+  font-size: 23px;
+  letter-spacing: 1px;
+  color: #4d4d4d;
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  margin: 10px 0 8px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.exp-details h2 {
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #939393;
+  margin: 15px 0 8px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.exp-details p {
+  color: #3b3b3b;
+  font-size: 17px;
+  line-height: 25px;
+  margin: 10px 0 0;
+  position: relative;
+}
+
+.exp-icon {
+  font-size: 23px;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid white;
+  background-color: white;
+  position: relative;
+  transition: 0.4s;
+}
+
+.partner-logo {
+  max-width: 150px;
+}
+
+#portfolio .btn-primary {
+  margin-top: 20px;
+  background: linear-gradient(90deg, #2C3E50, #34495E, #5D6D7E);
+  border: none;
+}
+
+#portfolio .btn-primary:hover {
+  background: linear-gradient(90deg, #1A252F, #22303B, #3B4A59);
+  transform: translateY(-2px);
+}
+
+
+/* ===================== */
+/* Responsive breakpoints */
+/* ===================== */
+
+
+@media screen and (max-width: 1024px) {
+  .exp-main {
+    min-height: 450px;
+  }
+
+  .exp-details h3 {
+    font-size: 21px;
+  }
+
+  .exp-details p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .exp-main {
+    padding: 30px 15px;
+    min-height: 400px;
+  }
+
+  .exp-details h3 {
+    font-size: 20px;
+  }
+
+  .exp-details p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .partner-logo {
+    max-width: 120px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    margin: 0;
+  }
+  .exp-main {
+    padding: 20px 10px;
+    min-height: auto; /* allow content to define height */
+  }
+
+  .exp-details h3 {
+    font-size: 18px;
+  }
+
+  .exp-details p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .partner-logo {
+    max-width: 100px !important;
+  }
+}

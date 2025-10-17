@@ -1,0 +1,205 @@
+.apply-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 110;
+  background: rgba(51, 51, 51, 0.95);
+  scroll-margin-top: 67px;
+  padding: 80px;
+}
+
+.apply-title {
+  color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 300px;
+  position: relative;
+  margin-top: 20px;
+  text-align: center; /* Center title text */
+}
+
+.apply-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 800px;
+  max-width: 90%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 15;
+  margin-top: 20px;
+}
+
+.apply-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Simplify input and select style to underline only */
+.apply-box input,
+.apply-box select {
+  margin-bottom: 25px;
+  padding: 25px 5px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  background: transparent;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.apply-box input:focus,
+.apply-box select:focus {
+  outline: none;
+  border-bottom: 2px solid #444;
+}
+
+/* Keep consistent button style */
+.submit-btn {
+  background: linear-gradient(90deg, #2C3E50, #34495E, #5D6D7E);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.submit-btn:hover {
+  background: #222;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 140px;
+  margin-top: 10px;
+}
+
+#apply,
+.apply-container {
+  background: #34495E !important;
+  background-image: none !important;
+  background-attachment: scroll !important;
+}
+
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.success-message {
+  margin-top: 15px;
+  color: #2C3E50;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* --- Tablets (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  .apply-container {
+    padding: 60px;
+  }
+
+  .apply-box {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .apply-title {
+    width: 260px;
+    padding: 25px;
+  }
+
+  .apply-title h2 {
+    font-size: 22px;
+  }
+
+  .apply-box input,
+  .apply-box select {
+    font-size: 15px;
+  }
+}
+
+/* --- Small tablets & large phones (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .apply-container {
+    padding: 40px 20px;
+  }
+
+  .apply-title {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .apply-title h2 {
+    font-size: 20px;
+  }
+
+  .apply-box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .apply-box input,
+  .apply-box select {
+    font-size: 14px;
+  }
+
+  .checkbox-group {
+    gap: 50px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+/* --- Mobile phones (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .apply-container {
+    padding: 30px 10px;
+  }
+
+  .apply-title {
+    width: 100%;
+    padding: 15px;
+    border-radius: 6px;
+  }
+
+  .apply-title h2 {
+    font-size: 18px;
+  }
+
+  .apply-box {
+    padding: 15px;
+    border-radius: 6px;
+  }
+
+  .apply-box input,
+  .apply-box select {
+    font-size: 14px;
+    padding: 8px 4px;
+  }
+
+  .checkbox-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}

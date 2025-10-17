@@ -1,0 +1,39 @@
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Header from "./component/Header/Header";
+import Footer from "./component/Footer/Footer";
+import Preloader from "./component/Preloader/Preloader";
+
+import Home from "./Pages/Home.jsx";
+import About from "./Pages/AboutPage.jsx";
+import Portfolio from "./Pages/PortfolioPage.jsx";
+import Partners from "./Pages/PartnersPage.jsx";
+import ApplyForm from "./Pages/ApplyPage/ApplyForm.jsx";
+import Contact from "./Pages/ContactPage.jsx";
+
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
+function App() {
+  return (
+    <React.StrictMode>
+      <Router>
+        <Preloader />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/apply" element={<ApplyForm />} />
+        </Routes>
+        <Footer />
+        <SpeedInsights />
+      </Router>
+    </React.StrictMode>
+  );
+}
+
+export default App;

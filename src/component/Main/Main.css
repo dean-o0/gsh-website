@@ -1,0 +1,96 @@
+#home {
+  height: 100vh;
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.home-content-main {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.home-row {
+  z-index: 2;
+  position: relative;
+}
+
+.home-text {
+  width: 100%;
+}
+
+.cd-headline.clip span,
+.cd-headline.clip .Typewriter {
+  font-size: 82px;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background: url("https://www.goldstandardholdings.co.za/wp-content/uploads/2017/06/gshBackround.jpg") 50% 0 no-repeat fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Extra Small Screens - 320px and below */
+@media screen and (max-width: 320px) {
+  .home-row {
+    z-index: 2;
+    position: relative;
+  }
+
+  .home-text h2 {
+    font-size: 34px;
+    color: white;
+    font-family: "Roboto Slab", serif;
+    letter-spacing: 2px;
+    font-weight: 900;
+  }
+
+  section {
+    padding: 0;
+    margin: 30px 0 0 0;
+    height: auto;
+  }
+}
+
+/* Small phones - up to 480px */
+@media screen and (max-width: 480px) {
+  .cd-headline.clip span,
+  .cd-headline.clip .Typewriter {
+    font-size: 32px;
+  }
+
+  .home-text {
+    padding: 0 10px;
+  }
+}
+
+/* Tablets & large phones - up to 768px */
+@media screen and (max-width: 768px) {
+  .cd-headline.clip span,
+  .cd-headline.clip .Typewriter {
+    font-size: 42px;
+  }
+}
+
+/* Small laptops & tablets - up to 1024px */
+@media screen and (max-width: 1024px) {
+  .cd-headline.clip span,
+  .cd-headline.clip .Typewriter {
+    font-size: 56px;
+  }
+}

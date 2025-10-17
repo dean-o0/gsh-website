@@ -24,3 +24,4 @@ yarn-error.log*
 
 src/utils/mapboxConfig.js
 backend/.env
+*.env

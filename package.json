@@ -2,7 +2,7 @@
   "name": "react-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://dean-o0.github.io/gsh-website",
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^5.1.2",
     "@testing-library/jest-dom": "^5.12.0",

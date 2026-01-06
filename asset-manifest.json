@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/gsh-website/static/css/main.3e7c7535.css",
+    "main.js": "/gsh-website/static/js/main.4da8794c.js",
+    "static/media/gsh_loader.gif.webp": "/gsh-website/static/media/gsh_loader.gif.6e9c4209c7a1829f1693.webp",
+    "static/media/subtle_bg_clients.jpg": "/gsh-website/static/media/subtle_bg_clients.b6f341b70f3d1a46f959.jpg",
+    "static/media/gsh_logo_image.png": "/gsh-website/static/media/gsh_logo_image.1dbc676f5a97fd47fc81.png",
+    "index.html": "/gsh-website/index.html",
+    "main.3e7c7535.css.map": "/gsh-website/static/css/main.3e7c7535.css.map",
+    "main.4da8794c.js.map": "/gsh-website/static/js/main.4da8794c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e7c7535.css",
+    "static/js/main.4da8794c.js"
+  ]
+}

@@ -14,7 +14,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 function App() {
   return (
     <React.StrictMode>
-      <Router>
+      <Router basename="/gsh-website">
         <Preloader />
         <Header />
         <Routes>

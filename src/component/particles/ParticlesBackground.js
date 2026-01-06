@@ -1,29 +1,76 @@
-import { useEffect } from "react";
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 export default function ParticlesBackground() {
-  useEffect(() => {
-    // Load the particles.js script dynamically
-    const script = document.createElement("script");
-    script.src = "/particles.min.js";
-    script.onload = () => {
-      if (window.particlesJS) {
-        window.particlesJS.load("particles-js", "/particles.json");
-      }
-    };
-    document.body.appendChild(script);
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
   }, []);
 
   return (
-    <div
-      id="particles-js"
+    <Particles
+      id="particles-js"  // <-- IMPORTANT: match Main.css selector
+      init={particlesInit}
       style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
+        position: "relative",  // <-- change from absolute
         width: "100%",
-        height: "100vh",
-        zIndex: -1
+        height: "100%",
       }}
+      options={{
+        fpsLimit: 60,
+        background: { color: "transparent" },
+
+        interactivity: {
+          events: {
+            onHover: {
+              enable: true,
+              mode: "repulse",   // hover effect
+            },
+            onClick: {
+              enable: true,
+              mode: "push",      // clicking creates more particles
+            },
+          },
+          modes: {
+            repulse: {
+              distance: 100,
+              duration: 0.4,
+            },
+            push: {
+              quantity: 4,
+            },
+          },
+        },
+
+        particles: {
+          number: {
+            value: 80,
+            density: { enable: true, area: 800 },
+          },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: { min: 1, max: 3 } },
+
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+
+          move: {
+            enable: true,
+            speed: 1.2,
+            direction: "none",
+            outModes: { default: "out" },
+          },
+        },
+
+        detectRetina: true,
+      }}
+
     />
   );
 }
